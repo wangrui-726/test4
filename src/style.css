@@ -1,0 +1,100 @@
+:root {
+  --primary: #4f6ef7;
+  --primary-dark: #3a55d9;
+  --danger: #ef4444;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --text: #1f2937;
+  --text-light: #6b7280;
+  --bg: #f5f7fb;
+  --border: #e5e7eb;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 20px 48px rgba(79, 110, 247, 0.18);
+  --radius: 16px;
+  --radius-lg: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 18px;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* ===== 页面骨架 ===== */
+.page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 56px 48px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* ===== Element Plus 尺寸 ===== */
+.el-button--large {
+  font-size: 19px !important;
+  padding: 18px 36px !important;
+  height: auto !important;
+}
+
+.el-button--small {
+  font-size: 15px !important;
+  padding: 10px 20px !important;
+  height: auto !important;
+}
+
+.el-input__inner {
+  height: 46px !important;
+}
+
+.el-select__wrapper {
+  min-height: 46px !important;
+}
+
+.el-tag {
+  font-size: 15px !important;
+  padding: 6px 14px !important;
+  height: auto !important;
+}
+
+.el-table th.el-table__cell,
+.el-table td.el-table__cell {
+  padding: 18px 0 !important;
+}
+
+.el-menu-item {
+  height: 88px !important;
+  line-height: 88px !important;
+  font-size: 18px !important;
+}
