@@ -23,7 +23,7 @@
           <h3>{{ item.title }}</h3>
           <p>{{ item.content }}</p>
           <div class="card-footer">
-            <el-avatar :size="36" src="/img.jpg" />
+            <el-avatar :size="40" :src="`${base}img.jpg`" />
             <span>{{ item.author }}</span>
           </div>
         </article>
@@ -37,6 +37,7 @@ import { ref, computed } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useArticleStore } from '../stores/article'
 
+const base = import.meta.env.BASE_URL
 const { list, total, tags } = storeToRefs(useArticleStore())
 const keyword = ref('')
 const activeTag = ref('')

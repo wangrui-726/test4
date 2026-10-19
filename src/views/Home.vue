@@ -3,7 +3,7 @@
     <!-- Hero -->
     <section class="hero">
       <div class="hero-glow"></div>
-      <el-avatar :size="130" src="/img.jpg" class="hero-avatar" />
+      <el-avatar :size="130" :src="`${base}img.jpg`" class="hero-avatar" />
       <div class="hero-text">
         <h1>你好，<span class="highlight">王芮</span> 欢迎回来！</h1>
         <p class="subtitle">文章 · 项目 · 生活 · 记录每一天</p>
@@ -77,6 +77,7 @@ import { useUserStore } from '../stores/user'
 import { useArticleStore } from '../stores/article'
 import { useProjectStore } from '../stores/project'
 
+const base = import.meta.env.BASE_URL
 const router = useRouter()
 const { logged } = storeToRefs(useUserStore())
 const { total: articleTotal } = storeToRefs(useArticleStore())
@@ -90,7 +91,6 @@ const timeline = [
 </script>
 
 <style scoped>
-/* 一屏容器 */
 .home {
   max-width: 1400px;
   margin: 0 auto;
@@ -102,7 +102,6 @@ const timeline = [
   overflow: hidden;
 }
 
-/* Hero —— 放大 */
 .hero {
   position: relative;
   display: flex;
@@ -142,7 +141,6 @@ const timeline = [
 .subtitle { font-size: 18px; color: var(--text-light); margin: 0; }
 .hero-actions { display: flex; gap: 14px; position: relative; z-index: 1; }
 
-/* 统计 —— 放大 */
 .stats { flex-shrink: 0; }
 .stat-card {
   display: flex;
@@ -173,7 +171,6 @@ const timeline = [
 .stat-num { font-size: 38px; font-weight: 800; line-height: 1.15; }
 .stat-label { font-size: 16px; opacity: 0.92; margin-top: 4px; }
 
-/* 时间线 —— 放大 */
 .timeline-wrap {
   flex: 1;
   background: #fff;

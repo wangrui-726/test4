@@ -18,7 +18,7 @@
     <div class="right">
       <el-dropdown v-if="logged" @command="handleCommand">
         <span class="user">
-          <el-avatar :size="40" src="/img.jpg" />
+          <el-avatar :size="40" :src="`${base}img.jpg`" />
           <span class="name">{{ displayName }}</span>
         </span>
         <template #dropdown>
@@ -37,6 +37,7 @@ import { storeToRefs } from 'pinia'
 import { useRoute, useRouter } from 'vue-router'
 import { useUserStore } from '../stores/user'
 
+const base = import.meta.env.BASE_URL
 const route = useRoute()
 const router = useRouter()
 const userStore = useUserStore()
